@@ -1,0 +1,13 @@
+#{extends 'main.html' /}
+
+<h1>Detalhes do Profissional:</h1>
+
+<img src="@{Profissionais.verFoto(pessoa.id)}" 
+     class="img-thumbnail" 
+     style="max-width:150px; height:auto; border-radius:10px;" />
+<p>${pessoa.nome}</p>
+<p>${pessoa.email}</p>
+
+<a href="@{Pacientes.form}">Cadastrar Novo</a> |
+
+<a href="@{Pacientes.listar}">Voltar para a listagem</a>

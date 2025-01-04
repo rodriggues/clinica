@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8"> 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" /> <!-- Importa os ícones do Bootstrap -->
+    <title>Login</title> 
+            <link rel="stylesheet" media="screen" href="@{'/public/stylesheets/log.css'}"><!-- Importa o arquivo CSS para estilização -->
+    <link href="https://fonts.googleapis.com/css?family=Arvo" rel="stylesheet"> <!-- Importa a fonte "Arvo" do Google Fonts -->
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css'> 
+</head>
+
+<body>
+    <div class="container" id="container">
+        <div class="form-container sign-in-container">
+            <form action="#">
+               
+                <h3>Caso seja Profissional,</h3>
+                  <h1>cadastre-se!</h1> 
+                    <p>Informe os dados para cadastrar um profissional ou clique em entrar para logar!</p>
+                    <button><a href="@{Profissionais.form}">Cadastre-se</a></button> 
+                <a href="@{login.form}">Entrar</a>
+            </form>
+        </div>
+        
+        <div class="overlay-container">
+            <div class="overlay">
+  
+                <div class="overlay-panel overlay-right">
+					<h3>Caso seja Paciente,</h3>
+                    <h1>cadastre-se!</h1> 
+                    <p>Informe os dados para marcar uma consulta ou clique em entrar para abrir a listagem de pacientes!</p> <!-- Texto adicional -->
+                    <button class="ghost" id="signUp"><a href="@{Pacientes.form}">Cadastre-se</a></button> 
+                    <a href="@{Pacientes.listar}">Entrar</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+  
+</body>
+
+</html>

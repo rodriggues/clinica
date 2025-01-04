@@ -1,0 +1,50 @@
+#{extends 'main.html' /}
+
+#{set title:'Cadastro de Profissionais' /}
+
+<form action="@{Profissionais.salvar}" enctype="multipart/form-data" method="post">
+	
+	<input type="hidden" name="p.id" value="${p?.id}">
+
+	<div class="mb-3">
+		<label class="form-label">Nome:</label>
+		<input type="text" class="form-control" name="p.nome" value="${p?.nome}"/>
+	</div>
+
+	<div class="mb-3">
+		<label class="form-label">Profissão:</label>
+		<select id="profissao"  class="form-control" name="p.profissao" value="${p?.profissao}" />
+                    <option selected>Escolher...</option>
+                    <option>Psicóloga</option>
+                    <option>Dentista</option>
+                    <option>Ginecologista</option>
+                    <option>Nutricionista</option>
+                    <option>Fisioterapeuta</option>
+                </select>
+	</div>
+	                <div class="form-group">
+                <label for="email">E-mail:</label>
+                <input type="email" class="form-control" id="email" name="p.email" placeholder="E-mail" value="${p?.email}" />
+            </div>
+
+            
+            <div class="form-group">
+                <label for="email">Senha:</label>
+                <input type="password" class="form-control" id="senha" name="p.senha" placeholder="Senha" />
+            </div><br/>
+            
+            <div class="mb-3">
+		<label class="form-label">Foto:</label>
+		<input class="form-control" type="file" name="p.foto" accept="image/*" />
+
+		<span>${p?.foto != null ? p.foto.file.name : 'Nenhuma foto selecionada'}</span>
+		
+	</div>
+
+
+	
+	<div class="mb-3">
+	<button type="submit">Enviar</button>
+	</div>
+
+</form>
