@@ -6,6 +6,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/png" href="@{'/public/images/Damed.png'}"/>
      <link rel="stylesheet" media="screen" href="@{'/public/stylesheets/cads.css'}"><!-- Importa o arquivo CSS para estilização -->
     <title>Formulário</title>
 </head>
@@ -26,19 +27,19 @@
                     <!-- Campos para informações do usuário -->
                     <div class="input-box">
                 <label for="nome">Nome:</label>
-                <input type="text" class="form-control" id="nome" name="usu.nome" placeholder="Nome" value="${usu?.nome}" />
+                <input type="text" class="form-control" id="nome" name="usu.nome" placeholder="Nome" value="${usu?.nome}" required />
             </div>
             
             <div class="input-box">
                 <label for="email">E-mail:</label>
-                <input type="email" class="form-control" id="email" name="usu.email" placeholder="E-mail" value="${usu?.email}" />
+                <input type="email" class="form-control" id="email" name="usu.email" placeholder="E-mail" value="${usu?.email}" required />
             </div>
             
       
            
             <div class="input-box">
                 <label for="dataNasc">Data de Nascimento:</label>
-                <input type="date" class="form-control" id="dataNasc" name="usu.dataNasc" placeholder="Data de Nascimento" value="${usu?.dataNasc}" />
+                <input type="date" class="form-control" id="dataNasc" name="usu.dataNasc" placeholder="Data de Nascimento" value="${usu?.dataNasc}" required />
             </div>
             
              <div class="input-box">
@@ -52,12 +53,12 @@
 </div>
                   <div class="input-box">
                 <label for="cpf">CPF:</label>
-                <input type="text" class="form-control" id="cpf"  name="usu.cpf" placeholder="CPF" value="${usu?.cpf}" />
+                <input type="text" class="form-control" id="cpf"  name="usu.cpf" placeholder="CPF" value="${usu?.cpf}" required />
             </div>
             
                 <div class="input-box">
                 <label for="telefone">Telefone</label>
-                <input type="tel" id="telefone" name="usu.telefone" placeholder="(XX) XXXXX-XXXX" value="${usu?.telefone}">
+                <input type="tel" id="telefone" name="usu.telefone" placeholder="(XX) XXXXX-XXXX" value="${usu?.telefone}" required>
             </div>
         <div class="input-box">
     <label for="uf">UF:</label>
@@ -78,7 +79,7 @@
 
        <div class="input-box">
             <label for="endereco">Endereço:</label>
-            <input type="text" class="form-control" id="endereco" name="usu.endereco" placeholder="Apartamento, hotel, casa, etc." value="${usu?.endereco}" />
+            <input type="text" class="form-control" id="endereco" name="usu.endereco" placeholder="Apartamento, hotel, casa, etc." value="${usu?.endereco}" required/>
         </div>
 </div>
         <div class="continue-button">
