@@ -4,7 +4,7 @@ import play.mvc.Controller;
 
 public class Inicial extends Controller {
 	
-	public static void Form() {
+	public static void form() {
 		render();
 	}
 
